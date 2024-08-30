@@ -87,29 +87,6 @@
          "y":0
         }, 
         {
-         "draworder":"topdown",
-         "id":8,
-         "name":"spawnpoint",
-         "objects":[
-                {
-                 "height":0,
-                 "id":4,
-                 "name":"player",
-                 "point":true,
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":0,
-                 "x":505.395380205699,
-                 "y":91.8900691283089
-                }],
-         "opacity":1,
-         "type":"objectgroup",
-         "visible":true,
-         "x":0,
-         "y":0
-        }, 
-        {
          "data":[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
@@ -148,6 +125,53 @@
          "type":"tilelayer",
          "visible":true,
          "width":39,
+         "x":0,
+         "y":0
+        }, 
+        {
+         "draworder":"topdown",
+         "id":8,
+         "name":"spawnpoint",
+         "objects":[
+                {
+                 "height":0,
+                 "id":4,
+                 "name":"player",
+                 "point":true,
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":0,
+                 "x":434.581015005901,
+                 "y":212.021581520823
+                }, 
+                {
+                 "height":0,
+                 "id":119,
+                 "name":"npc2",
+                 "point":true,
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":0,
+                 "x":319.50767155623,
+                 "y":254.594503456415
+                }, 
+                {
+                 "height":0,
+                 "id":121,
+                 "name":"npc1",
+                 "point":true,
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":0,
+                 "x":121.396054628225,
+                 "y":204.434328106559
+                }],
+         "opacity":1,
+         "type":"objectgroup",
+         "visible":true,
          "x":0,
          "y":0
         }, 
@@ -1026,6 +1050,28 @@
                  "width":11.8023941999662,
                  "x":522.255943348508,
                  "y":356.60091047041
+                }, 
+                {
+                 "height":16.0175349856685,
+                 "id":117,
+                 "name":"npc1",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":10.5378519642556,
+                 "x":116.337885685382,
+                 "y":190.524363513741
+                }, 
+                {
+                 "height":18.1251053785196,
+                 "id":120,
+                 "name":"npc2",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":10.9593660428258,
+                 "x":314.027988534817,
+                 "y":238.998482549317
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1033,8 +1079,8 @@
          "x":0,
          "y":0
         }],
- "nextlayerid":9,
- "nextobjectid":108,
+ "nextlayerid":10,
+ "nextobjectid":124,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.11.0",

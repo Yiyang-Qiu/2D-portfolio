@@ -29,4 +29,8 @@ export const dialogueData = {
 
     niceChair: 'Too tall to sit......',
 
+    npc1: 'Welcome to the playGround for test! ',
+
+    npc2: 'Rise! Tarnished! By the way, being leetcoder is not a bad thing',
+
 }

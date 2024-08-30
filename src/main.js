@@ -12,8 +12,13 @@ k.loadSprite("spritesheet", "./spritesheet.png", {
         "walk-side": { from: 979, to: 982, loop: true, speed: 8 },
         "idle-up": 1018,
         "walk-up": { from: 1018, to: 1021, loop: true, speed: 8 },
+        "npc1-idle-side": 987,
+        "npc1-walk-side": { from: 997, to: 90, loop: true, speed: 8 },
+        "npc2-idle-down": 866,
     },
 });
+
+
 
 //loding map png file
 k.loadSprite("map", "./map.png");
@@ -40,7 +45,7 @@ k.scene("main", async () => {
         }),
         k.body(),
         k.anchor("center"),
-        k.pos(505.4, 91.89),
+        k.pos(),
         k.scale(scaleFactor),
         {
             speed: 250,
@@ -48,6 +53,42 @@ k.scene("main", async () => {
             isInDialogue: false,
         },
         "player",
+    ]);
+
+    //npc1
+    const npc1 = k.make([
+        k.sprite("spritesheet", { anim: "npc1-idle-side" }),
+        k.area({
+            shape: new k.Rect(k.vec2(0, 3), 10, 10),
+        }),
+        k.body(),
+        k.anchor("center"),
+        k.pos(),
+        k.scale(scaleFactor),
+        {
+            speed: 0,
+            direction: "right",
+            isInDialogue: false,
+        },
+        "npc1",
+    ]);
+
+    //npc2
+    const npc2 = k.make([
+        k.sprite("spritesheet", { anim: "npc2-idle-down" }),
+        k.area({
+            shape: new k.Rect(k.vec2(0, 3), 10, 10),
+        }),
+        k.body(),
+        k.anchor("center"),
+        k.pos(),
+        k.scale(scaleFactor),
+        {
+            speed: 0,
+            direction: "down",
+            isInDialogue: false,
+        },
+        "npc2",
     ]);
 
     for (const layer of layers) {
@@ -75,12 +116,33 @@ k.scene("main", async () => {
 
         if (layer.name === "spawnpoint") {
             for (const enity of layer.objects) {
+                //生成玩家
                 if (enity.name === "player") {
                     player.pos = k.vec2(
                         (map.pos.x + enity.x) * scaleFactor,
                         (map.pos.y + enity.y) * scaleFactor,
                     );
                     k.add(player);
+                    continue;
+                }
+
+                //生成npc1
+                if (enity.name === "npc1") {
+                    npc1.pos = k.vec2(
+                        (map.pos.x + enity.x) * scaleFactor,
+                        (map.pos.y + enity.y) * scaleFactor,
+                    );
+                    k.add(npc1);
+                    continue;
+                }
+
+                //生成npc2
+                if (enity.name === "npc2") {
+                    npc2.pos = k.vec2(
+                        (map.pos.x + enity.x) * scaleFactor,
+                        (map.pos.y + enity.y) * scaleFactor,
+                    );
+                    k.add(npc2);
                     continue;
                 }
             }
