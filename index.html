@@ -7,6 +7,13 @@
     <title>Vite App</title>
   </head>
   <body>
+    <audio autoplay loop id="myaudio">
+      <source src="./LittlerootTown.mp3">
+    </audio>
+    <script>
+      var audio = document.getElementById("myaudio");
+      audio.volume = 0.2;
+    </script>
     <style>
       @font-face {
         font-family: monogram;
@@ -75,7 +82,7 @@
     </style>
     <div id="app">
       <div id="ui">
-        <p class="note">Tap / Click /↑ ↓ → ← around to move</p>
+        <p class="note">Tap / Click /↑ ↓ → ← to move around</p>
         <div id="textbox-container" style="display: none">
           <div id="textbox">
             <p id="dialogue" class="ui-text"></p>
