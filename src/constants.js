@@ -15,7 +15,7 @@ export const dialogueData = {
 
     Master: 'My Master\'s degree in Computer Engineering from New York University(2022 - 2024).I proudly display it on the wall, as it helps me become a better problem solver.',
 
-    TV: 'Showing TV Series: Umberella Academy season 4...',
+    TV: 'Showing TV Series: Umbrella Academy season 4...',
 
     sofa: 'The sofa is so soft that it makes me feel sleepy.',
 
